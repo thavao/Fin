@@ -1,4 +1,11 @@
 <Solution>
-  <Project Path="Fin.Api/Fin.Api.csproj" />
-  <Project Path="Fin.Domain/Fin.Domain.csproj" />
+  <Folder Name="/1 - Presentation/">
+    <Project Path="src/Fin.Api/Fin.Api.csproj" />
+  </Folder>
+  <Folder Name="/2 - Domain/">
+    <Project Path="src/Fin.Domain/Fin.Domain.csproj" />
+  </Folder>
+  <Folder Name="/3 - Infrastructure/">
+    <Project Path="src/Fin.Data/Fin.Data.csproj" />
+  </Folder>
 </Solution>
