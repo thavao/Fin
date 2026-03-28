@@ -5,7 +5,7 @@ namespace Fin.Data;
 
 public class FinContext : DbContext
 {
-    public FinContext(DbContextOptions options) : base(options)
+    public FinContext(DbContextOptions<FinContext> options) : base(options)
     {
     }
 
