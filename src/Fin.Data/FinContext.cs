@@ -1,25 +1,24 @@
 using Fin.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Fin.Data
+namespace Fin.Data;
+
+public class FinContext : DbContext
 {
-    public class FinContext : DbContext
+    public FinContext(DbContextOptions options) : base(options)
     {
-        public FinContext(DbContextOptions options) : base(options)
-        {
-        }
+    }
 
-        protected FinContext()
-        {
-        }
+    protected FinContext()
+    {
+    }
 
-        public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Wallet> Wallets { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Wallet> Wallets { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
     }
 }

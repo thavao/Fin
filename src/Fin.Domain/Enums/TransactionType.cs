@@ -1,9 +1,8 @@
-namespace Fin.Domain.Enums
+namespace Fin.Domain.Enums;
+
+public enum TransactionType
 {
-    public enum TransactionType
-    {
-        Credit = 0,
-        Debit = 1,
-        Entry = 2
-    }
+    Credit = 0,
+    Debit = 1,
+    Entry = 2
 }

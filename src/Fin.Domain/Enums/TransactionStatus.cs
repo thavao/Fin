@@ -1,8 +1,7 @@
-namespace Fin.Domain.Enums
+namespace Fin.Domain.Enums;
+
+public enum TransactionStatus
 {
-    public enum TransactionStatus
-    {
-        Paid = 0,
-        Pending = 1
-    }
+    Paid = 0,
+    Pending = 1
 }

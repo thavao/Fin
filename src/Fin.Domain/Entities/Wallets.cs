@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+namespace Fin.Domain.Entities;
 
-namespace Fin.Domain.Entities
+public class Wallet
 {
-    public class Wallet
-    {
-        public int Id { get; set; }
-        public decimal Limit { get; set; }
-    }
+    public int Id { get; set; }
+    public decimal Limit { get; set; }
+    IEnumerable<Transaction>? Transactions { get; set; } = new List<Transaction>();
 }
