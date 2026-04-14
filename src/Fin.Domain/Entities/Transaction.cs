@@ -7,7 +7,7 @@ public class Transaction
     public required int Id { get; set; }
     public required string Title { get; set; }
     public string? Description { get; set; }
-    public required decimal Amoount { get; set; }
+    public required decimal Amount { get; set; }
     public DateTime TransactionDate { get; set; }
     public int Installment { get; set; }
     public int InstallmentCount { get; set; }

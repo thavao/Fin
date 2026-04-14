@@ -9,13 +9,9 @@ public class FinContext : DbContext
     {
     }
 
-    protected FinContext()
-    {
-    }
-
-    public DbSet<Transaction> Transactions { get; set; }
-    public DbSet<User> Users { get; set; }
-    public DbSet<Wallet> Wallets { get; set; }
+    public DbSet<Transaction>? Transactions { get; set; }
+    public DbSet<User>? Users { get; set; }
+    public DbSet<Wallet>? Wallets { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
