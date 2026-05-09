@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Fin.Data\Fin.Data.csproj" />
     <ProjectReference Include="..\Fin.Domain\Fin.Domain.csproj" />
+    <ProjectReference Include="..\Fin.Repository\Fin.Repository.csproj" />
   </ItemGroup>
 
 </Project>
