@@ -1,5 +1,6 @@
-﻿using Fin.Domain.Entities;
-using Fin.Domain.Interfaces;
+﻿using Fin.Domain.CQRS.Commands.CreateUser;
+using Fin.Domain.Interfaces.CQRS.Commands;
+using Fin.Domain.Interfaces.CQRS.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fin.Api.Controllers
@@ -8,23 +9,22 @@ namespace Fin.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
-        public UserController(IUserRepository userRepository)
+        private readonly ICommandDispatcher _commandDispatcher;
+        private readonly IQueryDispatcher _queryDispatcher;
+        public UserController(ICommandDispatcher commandDispatcher,
+        IQueryDispatcher queryDispatcher)
         {
-            _userRepository = userRepository;
+            _commandDispatcher = commandDispatcher;
+            _queryDispatcher = queryDispatcher;
         }
 
         [HttpPost]
-        public async void CreateUser()
+        public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = new User
-            {
-                Name = "Test",
-                Email = "email@email",
-                Password = "password",
-            };
 
-            await _userRepository.CreateUserAsync(user);
+            var result = await _commandDispatcher.DispatchAsync(request, cancellationToken);
+
+            return result ? Created() : StatusCode(500, "erro ao processar");
         }
 
     }

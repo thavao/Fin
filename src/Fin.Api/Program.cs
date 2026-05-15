@@ -1,5 +1,10 @@
+using Fin.Api.Config;
 using Fin.Data;
+using Fin.Domain.CQRS.Commands.CreateUser;
+using Fin.Domain.CQRS.Dispatcher;
 using Fin.Domain.Interfaces;
+using Fin.Domain.Interfaces.CQRS.Commands;
+using Fin.Domain.Interfaces.CQRS.Queries;
 using Fin.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -42,4 +47,8 @@ void Configure()
     builder.Services.AddScoped<IUserRepository, UserRepository>();
     builder.Services.AddScoped<IWalletRepository, WalletRepository>();
     builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+    builder.Services.AddScoped<ICommandDispatcher, CommandDispatcher>();
+    builder.Services.AddScoped<IQueryDispatcher, QueryDispatcher>();
+
+    builder.Services.AddCqrsHandlers(typeof(CreateUserCommand).Assembly);
 }
