@@ -7,5 +7,9 @@
   </Folder>
   <Folder Name="/3 - Infrastructure/">
     <Project Path="src/Fin.Data/Fin.Data.csproj" />
+    <Project Path="src/Fin.Repository/Fin.Repository.csproj" />
+  </Folder>
+  <Folder Name="/4 - CrossCutting/">
+    <Project Path="CrossCutting/CrossCutting.csproj" Id="4edbfa05-4229-48e8-94e5-920162605aba" />
   </Folder>
 </Solution>
