@@ -1,7 +1,7 @@
 ﻿namespace Fin.Domain.Interfaces.CQRS.Commands;
 
-public interface ICommandHandler<TCommand, TResult>
-    where TCommand : ICommand<TResult>
+public interface ICommandHandler<TCommand>
+     where TCommand : ICommand
 {
-    Task<TResult> HandleAsync(TCommand command, CancellationToken cancellationToken = default);
+    Task HandleAsync(TCommand command, CancellationToken cancellationToken = default);
 }

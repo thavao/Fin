@@ -21,7 +21,7 @@ public static class CqrsDependencyInjection
                 .Where(i =>
                     i.IsGenericType &&
                     (
-                        i.GetGenericTypeDefinition() == typeof(ICommandHandler<,>) ||
+                        i.GetGenericTypeDefinition() == typeof(ICommandHandler<>) ||
                         i.GetGenericTypeDefinition() == typeof(IQueryHandler<,>)
                     ));
 
