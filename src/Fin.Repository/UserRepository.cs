@@ -1,17 +1,28 @@
 ﻿using Fin.Data;
+using Fin.Domain.DTO.GetUserById;
 using Fin.Domain.Entities;
 using Fin.Domain.Interfaces;
 
 namespace Fin.Repository;
 
-public class UserRepository(FinContext dbContext) :IUserRepository
+public class UserRepository(FinContext dbContext) : IUserRepository
 {
     private readonly FinContext _dbContext = dbContext;
 
-    public Task CreateUserAsync(User user)
+    public async Task CreateUserAsync(User user)
     {
         _dbContext.Add(user);
         _dbContext.SaveChanges();
-        return Task.CompletedTask;
+    }
+
+    public async Task<GetUserByIdRepositoryResponse> GetUserByIdAsync(int id)
+    {
+        var user = await _dbContext.FindAsync<User>(id);
+        return new GetUserByIdRepositoryResponse
+        {
+            Id = user.Id,
+            Email = user.Email,
+            Name = user.Name
+        };
     }
 }
