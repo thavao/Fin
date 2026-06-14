@@ -1,4 +1,4 @@
-﻿using Fin.Data;
+using Fin.Data;
 using Fin.Domain.DTO.GetUserById;
 using Fin.Domain.Entities;
 using Fin.Domain.Interfaces;
@@ -15,9 +15,13 @@ public class UserRepository(FinContext dbContext) : IUserRepository
         _dbContext.SaveChanges();
     }
 
-    public async Task<GetUserByIdRepositoryResponse> GetUserByIdAsync(int id)
+    public async Task<GetUserByIdRepositoryResponse?> GetUserByIdAsync(int id)
     {
         var user = await _dbContext.FindAsync<User>(id);
+        if (user is null)
+        {
+            return null;
+        }
         return new GetUserByIdRepositoryResponse
         {
             Id = user.Id,

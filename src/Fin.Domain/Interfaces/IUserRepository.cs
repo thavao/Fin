@@ -6,6 +6,6 @@ namespace Fin.Domain.Interfaces
     public interface IUserRepository
     {
         Task CreateUserAsync(User user);
-        Task<GetUserByIdRepositoryResponse> GetUserByIdAsync(int id);
+        Task<GetUserByIdRepositoryResponse?> GetUserByIdAsync(int id);
     }
 }
