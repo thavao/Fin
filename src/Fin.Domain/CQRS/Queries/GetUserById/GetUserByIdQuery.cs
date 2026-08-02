@@ -5,6 +5,6 @@ namespace Fin.Domain.CQRS.Queries.GetUserById
 {
     public class GetUserByIdQuery : IQuery<Result<GetUserByIdQueryResponse>>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

@@ -43,7 +43,7 @@ void Configure()
     builder.Services.AddDbContext<FinContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly(typeof(FinContext).Assembly.FullName)));// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
     builder.Services.AddScoped<IUserRepository, UserRepository>();
-    builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+    builder.Services.AddScoped<IFinancialBookRepository, FinancialBookRepository>();
     builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
     builder.Services.AddScoped<IDispatcher, Dispatcher>();
     builder.Services.AddCqrsHandlers(typeof(CreateUserCommand).Assembly);

@@ -15,7 +15,7 @@ public class UserRepository(FinContext dbContext) : IUserRepository
         _dbContext.SaveChanges();
     }
 
-    public async Task<GetUserByIdRepositoryResponse?> GetUserByIdAsync(int id)
+    public async Task<GetUserByIdRepositoryResponse?> GetUserByIdAsync(Guid id)
     {
         var user = await _dbContext.FindAsync<User>(id);
         if (user is null)

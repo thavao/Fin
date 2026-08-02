@@ -24,7 +24,7 @@ namespace Fin.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(int id)
+        public async Task<IActionResult> GetUserById(Guid id)
         {
             var result = await _dispatcher.DispatchAsync(new GetUserByIdQuery { Id = id });
             return result.ToActionResult(this);
