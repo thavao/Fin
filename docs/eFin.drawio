@@ -174,7 +174,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HcvapeoeDW9GHUkok9q8-44" parent="HcvapeoeDW9GHUkok9q8-42" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="F&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;und_FK (&lt;/span&gt;&lt;span style=&quot;font-weight: 700; text-decoration: underline;&quot;&gt;uniqueIdentifier, not null&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;" vertex="1">
+        <mxCell id="HcvapeoeDW9GHUkok9q8-44" parent="HcvapeoeDW9GHUkok9q8-42" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Wallet_FK (&lt;/span&gt;&lt;span style=&quot;font-weight: 700; text-decoration: underline;&quot;&gt;uniqueIdentifier, not null&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="229.99999999999977" x="30" as="geometry">
             <mxRectangle height="30" width="229.99999999999977" as="alternateBounds" />
           </mxGeometry>
@@ -244,7 +244,7 @@
             <mxRectangle height="30" width="229.99999999999977" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HcvapeoeDW9GHUkok9q8-57" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="Fund" vertex="1">
+        <mxCell id="HcvapeoeDW9GHUkok9q8-57" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="FinancialBook" vertex="1">
           <mxGeometry height="240" width="230" x="80" y="300" as="geometry" />
         </mxCell>
         <mxCell id="HcvapeoeDW9GHUkok9q8-58" parent="HcvapeoeDW9GHUkok9q8-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
@@ -436,7 +436,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="tICDg-bysNIwP94U775q" name="Página-2">
-    <mxGraphModel dx="2054" dy="1143" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1174" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -459,7 +459,7 @@
             <mxPoint x="-190" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RIclO3H3FeA_9hVfSVVa-2" parent="1" style="whiteSpace=wrap;html=1;" value="Fund" vertex="1">
+        <mxCell id="RIclO3H3FeA_9hVfSVVa-2" parent="1" style="whiteSpace=wrap;html=1;" value="Wallet" vertex="1">
           <mxGeometry height="60" width="120" y="790" as="geometry" />
         </mxCell>
         <mxCell id="A_cdu7ug_iz0IMF5u8cV-2" edge="1" parent="1" source="Yw1teOHJq_vemqbcq2nl-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;dashPattern=8 8;" target="EQaIvop5EIMPz3STDNIs-8">
